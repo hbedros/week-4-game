@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>week-4-game</title>
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="/week-4-game/assets/game.js"></script>
+</head>
+
+<body>
+    
+  <div>
+    <h1 class="crystal_collector container jumbotron text-center"> Crystal Collector!</h1> 
+  </div>
+
+  <div class="discription container jumbotron text-center">
+    <div class = "row">
+    <p> You will be given a random number at the start of the game.</p>
+  
+    <p>There are four crystals below. By clicking on a crystal you will add a specific
+    amount of points to your total score.</p>
+
+    <p>You win the game by matching your total score to random number, you lose the game if your
+    total score goes above the random number.</p>
+
+    <p>The value of each crystal is hidden from you until you click on it.</p>
+
+    <p>Each time when the game starts, the game will change the values of each crystal.</p>
+    </div>
+  </div>
+</div>
+
+<div class = "container">
+  <div class = "row">
+  
+  <div class="computer-guess jumbotron text-center col-lg-5 col-sm-5"></div>
+
+  <div class="col-lg-2 col-sm-2 empty-div"></div>
+
+  <div class="score-count jumbotron text-center col-lg-5 col-sm-5"> 
+    <ul>
+      <li>Wins: 0</li>
+      <li>Losses: 0</li>
+    </ul>
+  </div>
+
+  </div>    
+</div>
+
+<div class="container img-container">
+  <div class="row">
+    <div id="blue" class="gem" col-lg-2 col-sm-2">
+        <img src="/Users/haigbedros/dev/week-4-game/assets/images/blue.jpg " width="150" height="150" alt="gem"">
+    </div>
+
+    <div class="col-lg-1 col-sm-1 empty-div"></div>
+
+    <div id="yellow" class="gem" col-lg-2 col-sm-2">
+        <img src="/Users/haigbedros/dev/week-4-game/assets/images/yellow.jpg" width="150" height="150" alt="gem"">
+    </div>
+
+    <div class="col-lg-1 col-sm-1 empty-div"></div>
+
+    <div id="pink" class="gem" col-lg-2 col-sm-2">
+        <img src="/Users/haigbedros/dev/week-4-game/assets/images/pink.jpg" width="150" height="150" alt="gem"">
+    </div>
+
+    <div class="col-lg-1 col-sm-1 empty-div"></div>
+
+    <div id="green" class="gem" col-lg-2 col-sm-2">
+        <img src="/Users/haigbedros/dev/week-4-game/assets/images/green.jpg" width="150" height="150" alt="gem"">
+    </div>
+
+    <div class="col-lg-1 col-sm-1 empty-div"></div>
+
+  </div>
+</div>
+
+
+</body>
+</html>
