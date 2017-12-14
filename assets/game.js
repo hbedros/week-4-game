@@ -7,32 +7,35 @@ var blueGemScore =  crystalNumber();
 var yellowGemScore = crystalNumber();
 var pinkGemScore = crystalNumber();
 var greenGemScore = crystalNumber();
-var gameScore = 0;
+var playerGuess = 0;
+var computerGuess = 0;
 var wins = 0;
 var losses = 0;
 
 
 function getRandomNumber() {  
-    var randomNumber = Math.floor(Math.random() * 100 + 1);   
+    var randomNumber = Math.floor(Math.random() * 50 + 1);  
+    console.log(randomNumber);
     return randomNumber;
 }
 
 function crystalNumber() {
-    var randomNumber = Math.floor(Math.random() * 25 + 1); 
+    var randomNumber = Math.floor(Math.random() * 20 + 1);
+    console.log(randomNumber);
     return randomNumber;
+    
 }
+
+
 
 // When the player clicks on a crystal, it will add a specific amount of points to the player's total score.
 // click event listener for gem
 
 $(document).on("click", ".gem", function(){
    var elementClicked = $(this).attr("id");
-   console.log("This gem was clicked: " + elementClicked);
-   updateGameScore(elementClicked);
-<<<<<<< HEAD
+//    console.log("This gem was clicked: " + elementClicked);
+   updateplayerGuess(elementClicked);
    checkForWin();
-=======
->>>>>>> d47094b597598da31e0d9857aca4676ce4dad0cd
 });
 
 
@@ -42,61 +45,56 @@ $(document).on("click", ".gem", function(){
 
 
 // When they do click one, update the player's score counter.
-function updateGameScore(gemColor){
+function updateplayerGuess(gemColor){
         console.log(gemColor);
 
         if (gemColor === "blue") {
             console.log("The blue gem was clicked");
-            gameScore += blueGemScore;
+            playerGuess += blueGemScore;
         } else if (gemColor === "yellow") {
             console.log("The yellow gem was clicked");
-            gameScore += yellowGemScore;
+            playerGuess += yellowGemScore;
         } else if (gemColor === "pink") {
             console.log("The pink gem was clicked");
-            gameScore += pinkGemScore;
+            playerGuess += pinkGemScore;
         } else if (gemColor === "green") {
             console.log("The green gem was clicked");
-            gameScore += greenGemScore;
+            playerGuess += greenGemScore;
         }
+
 }
 
 // The player wins if their total score matches the random number from the beginning of the game.
 function checkForWin(){
 
-<<<<<<< HEAD
-    if (gameScore === gameRandomNumber) {
+    if (playerGuess === gameRandomNumber) {
         alert("YOU WON!");
         wins +=1;
         resetGame();
+        
 
-    }else if (gameScore > gameRandomNumber){
+    }else if (playerGuess > gameRandomNumber){
         alert("YOU LOST!")
         losses +=1;
         resetGame();
     }
-
-=======
-    if gameScore
->>>>>>> d47094b597598da31e0d9857aca4676ce4dad0cd
+    
 }
 // The player loses if their score goes above the random number.
 
 
 // The game restarts whenever the player wins or loses.
-<<<<<<< HEAD
 function resetGame(){
     gameRandomNumber = getRandomNumber();
     blueGemScore =  crystalNumber();
     yellowGemScore = crystalNumber();
     pinkGemScore = crystalNumber();
     greenGemScore = crystalNumber();
-    gameScore = 0;
+    playerGuess = 0;
 
     alert("NEW GAME");
+    // console.log(resetGame);
 }
-=======
-
->>>>>>> d47094b597598da31e0d9857aca4676ce4dad0cd
 
 // When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden values. Of course, the user's score (and score counter) will reset to zero.
 
