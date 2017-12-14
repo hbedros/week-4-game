@@ -29,7 +29,10 @@ $(document).on("click", ".gem", function(){
    var elementClicked = $(this).attr("id");
    console.log("This gem was clicked: " + elementClicked);
    updateGameScore(elementClicked);
+<<<<<<< HEAD
    checkForWin();
+=======
+>>>>>>> d47094b597598da31e0d9857aca4676ce4dad0cd
 });
 
 
@@ -60,6 +63,7 @@ function updateGameScore(gemColor){
 // The player wins if their total score matches the random number from the beginning of the game.
 function checkForWin(){
 
+<<<<<<< HEAD
     if (gameScore === gameRandomNumber) {
         alert("YOU WON!");
         wins +=1;
@@ -71,11 +75,15 @@ function checkForWin(){
         resetGame();
     }
 
+=======
+    if gameScore
+>>>>>>> d47094b597598da31e0d9857aca4676ce4dad0cd
 }
 // The player loses if their score goes above the random number.
 
 
 // The game restarts whenever the player wins or loses.
+<<<<<<< HEAD
 function resetGame(){
     gameRandomNumber = getRandomNumber();
     blueGemScore =  crystalNumber();
@@ -86,6 +94,9 @@ function resetGame(){
 
     alert("NEW GAME");
 }
+=======
+
+>>>>>>> d47094b597598da31e0d9857aca4676ce4dad0cd
 
 // When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden values. Of course, the user's score (and score counter) will reset to zero.
 
