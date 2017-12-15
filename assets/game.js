@@ -77,12 +77,14 @@ $(document).ready(function () {
             wins += 1;
             resetGame();
 
-        $(".win-count").text(playerGuess);
+        $(".win-count").text(wins);
 
         } else if (playerGuess > gameRandomNumber) {
             alert("YOU LOST!")
             losses += 1;
             resetGame();
+
+        $(".lose-count").text(losses);
         }
 
     }
@@ -97,6 +99,9 @@ $(document).ready(function () {
         pinkGemScore = crystalNumber();
         greenGemScore = crystalNumber();
         playerGuess = 0;
+
+        $(".computer-guess").text(gameRandomNumber);
+        $(".guessed-score").text(playerGuess);
 
         alert("NEW GAME");
         // console.log(resetGame);
