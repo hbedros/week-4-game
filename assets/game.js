@@ -15,14 +15,14 @@ $(document).ready(function () {
 
 
     function getRandomNumber() {
-        var randomNumber = Math.floor(Math.random() * 50 + 1);
+        var randomNumber = Math.floor(Math.random() * 100 + 1);
         console.log(randomNumber);
         return randomNumber;
     }
 
 
     function crystalNumber() {
-        var randomNumber = Math.floor(Math.random() * 20 + 1);
+        var randomNumber = Math.floor(Math.random() * 25 + 1);
         console.log(randomNumber);
         return randomNumber;
 
